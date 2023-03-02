@@ -1,0 +1,56 @@
+.news
+    &__content
+        display: grid
+        grid-template-columns: repeat(2,50%)
+        margin-top: ph(48)
+
+    &__panel
+        padding: clamp(37px,125/1920*100vw,125px) clamp(26px,65/1920*100vw,65px) clamp(23px,91/1920*100vw,91px) clamp(28px,88/1920*100vw,88px)
+        &--white
+            background: #FDFDFD
+            box-shadow: 0px 0px 30px rgba(30, 30, 30, 0.1)
+        & > p + p
+            margin-top: 2em
+        & > p:first-child
+            font-style: normal
+            font-weight: 600
+            font-size: 26px
+            line-height: 34px
+            letter-spacing: 0.02em
+
+    &__title
+        font-style: normal
+        font-weight: 400
+        font-size: 30px
+        line-height: 121%
+        text-transform: uppercase
+        color: #1E1E1E
+        margin-bottom: ph(31)
+
+    &__breadcrumbs
+        margin-bottom: pw(63)
+
+    &__controls
+        margin-top: ph(70)
+        display: flex
+        justify-content: center
+        gap: 18px 6.25vw
+
+    &__control
+        border-radius: 50%
+        border: none
+        // position: absolute
+        height: 230px
+        aspect-ratio: 1
+        background: #025EA1
+        color: #fff
+        font-weight: 500
+        font-size: 22px
+        line-height: 109%
+        display: flex
+        align-items: center
+        justify-content: center
+        text-decoration: none
+        & > p
+            width: 70%
+            text-align: center

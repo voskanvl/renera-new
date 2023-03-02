@@ -1,0 +1,12 @@
+.stabilityScale
+    .stabilityScale__content 
+        .stabilityScale__title 
+            p СТАБИЛЬНОСТЬ
+            p.stabilityScale__title-shift  И МАСШТАБ
+        ul.stabilityScale__data 
+            each i in stabilityScale
+                li.stabilityScale__data-item
+                    .stabilityScale__data-title= i.title
+                    .stabilityScale__data-text= i.text
+
+        button.stabilityScale__button Где учиться

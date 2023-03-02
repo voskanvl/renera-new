@@ -1,0 +1,9 @@
+mixin accordion(title)
+    .accordion
+        input.accordion__switcher(type="checkbox")
+        .accordion__container
+            header.accordion__header
+                span= title 
+                span.accordion__mark
+            main.accordion__body 
+                block

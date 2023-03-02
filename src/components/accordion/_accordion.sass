@@ -1,0 +1,43 @@
+.accordion
+    position: relative
+    &__header
+        font-weight: 400
+        font-size: 30px
+        line-height: 30px
+        text-decoration-line: underline
+        color: #000000
+
+    &__body
+        // height: 0
+        overflow: hidden
+        transition: .5s
+        margin: 50px 0
+        max-height: 0px
+
+    &__switcher
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        height: 30px
+        opacity: 0
+        &:checked + .accordion__container
+            & > .accordion__body
+                max-height: 400px
+                // height: 300px
+                // height: auto
+            & .accordion__mark
+                background-image: url("../../../assets/svg/minus.svg")
+                background-position: 0 50%
+
+    &__header
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+    &__mark
+        background-image: url("../../../assets/svg/plus.svg")
+        background-repeat: no-repeat
+        width: 30px
+        height: 30px
+        background-size: contain

@@ -1,0 +1,81 @@
+.stabilityScale
+    background-image: url("../../../assets/images/stability-scale.png")
+    background-repeat: no-repeat
+    height: 426px
+    position: relative
+    @media (width < 1024px)
+        height: 850px
+        background-image: url("../../../assets/images/stability-scale-mobile.png")
+        background-size: cover
+
+    &__content
+        z-index: 1
+        color: #fff
+        position: absolute
+        width: 75.625%
+        top: 57px
+        left: 50%
+        translate: -50% 0
+
+    &__data
+        list-style: none
+        display: flex
+        align-items: stretch
+        justify-content: space-between
+        @media (width < 1024px)
+            flex-direction: column
+
+    &__data-item
+        padding-inline: 5.3646vw
+        @media (width < 1024px)
+            padding-inline: unset
+            padding-block: 30px
+
+    &__data-item + &__data-item
+        border-left: 1px solid #fff
+        @media (width < 1024px)
+            border-left: none
+            border-top: 1px solid #fff
+
+    &__data-item:first-child
+        padding-left: 0
+
+    &__data-item:last-child
+        padding-right: 0
+
+    &__data-title
+        font-weight: 700
+        font-size: clamp(30px,50/1920*100vw,50px)
+        line-height: 50px
+        letter-spacing: 0.02em
+        margin-bottom: 12px
+
+    &__data-text
+        font-weight: 400
+        font-size: clamp(14px,22/1920*100vw,22px)
+        line-height: 22px
+        letter-spacing: 0.02em
+
+    &__title
+        font-weight: 400
+        font-size: 30px
+        line-height: 35px
+        letter-spacing: 0.02em
+        margin-bottom: ph(78)
+
+    &__title-shift
+        margin-left: 3.7em
+
+    &__button
+        display: block
+        border: none
+        border-radius: 50px
+        background: #fff
+        color: #218DD9
+        text-transform: uppercase
+        font-size: 14px
+        padding: 13px 75px
+        font-weight: 600
+        line-height: 28px
+        max-width: 250px
+        margin: 0 auto

@@ -1,0 +1,50 @@
+.tizer
+  display: grid
+  grid-template-columns: 40% 60%
+  @media(width<1024px)
+    grid-template-columns: 100%
+    grid-template-rows: repeat(2,1fr)
+
+  &__right
+    display: flex
+    justify-content: flex-end
+    & > img
+      width: 100%
+
+  &__left
+    background-image: url("../../../assets/images/web.png")
+    background-repeat: no-repeat
+    position: relative
+    background-size: contain
+    @media(width<1024px)
+      background-image: url("../../../assets/images/web-mobile.png")
+      background-position: 100% 0
+
+  &__inner
+    position: absolute
+    top: 50%
+    left: 50%
+    translate: -50% -50%
+
+  &__title
+    color: #0D0D0D
+    font-size: fz(50, 22px)
+    font-weight: bold
+    font-family: 'TT Firs Neue', sans-serif
+    & > p
+      white-space: nowrap
+
+  &__video
+    display: flex
+    align-items: center
+    column-gap: pw(30)
+    max-width: 381px
+    width: 60vw
+    aspect-ratio: 2.2 1
+    & > img
+      width: calc(var(--index) * 6)
+
+  &__video-start
+    color: #192F75
+    font-family: 'Graphik LCG', sans-serif
+    font-size: fz(22)

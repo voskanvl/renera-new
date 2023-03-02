@@ -1,0 +1,12 @@
+=wid($x:1320px,$percent:95%)
+    width: min($x,$percent)
+    margin: 0 auto
+
+@function pw($x)
+    @return calc($x / 1920 *100vw)
+
+@function ph($x)
+    @return clac($x / 1010 *100vh)
+
+@function fz($x, $end: 12px)
+    @return clamp($end,$x/1920*100vw, clac($x + 0px) )

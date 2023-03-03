@@ -62,9 +62,17 @@
         border-radius: 50px
         border: none
         margin-top: 60px
+    &__main-list
+        @media (width < 1024px)
+            display: none
 
     &__slider
         position: relative
+        display: none
+        width: 97%
+        margin: 0 auto
+        @media (width < 1024px)
+            display: block
 
     &__slide-control
         display: flex

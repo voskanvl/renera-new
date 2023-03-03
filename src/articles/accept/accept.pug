@@ -1,0 +1,14 @@
+.accept
+    .accept__wrap
+        .accept__title 
+            p КОМПАНИЯ ОТКРЫВАЕТ ПРИЕМ ЗАЯВОК ПО СЛЕДУЮЩИМ
+            p РЕГУЛЯРНО ВОСТРЕБОВАННЫМ ПРОФЕССИЯМ ДЛЯ 
+            p НОВОЙ ГИГАФАБРИКИ В ОКРУГЕ Г.НЕМАН:
+    .accept__container
+        ul.accept__list
+            each i in accept 
+                li.accept__list-item 
+                    span.accept__list-id= i.id
+                    span.accept__list-name= i.name
+        button.accept__button Стать кандидатом
+

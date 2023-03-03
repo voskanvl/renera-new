@@ -13,7 +13,7 @@
         width: min(1252px, 100vw)
         display: flex
         flex-direction: column
-        align-items: center
+        align-items: stretch
 
         & .splide
             width: 100%
@@ -49,19 +49,22 @@
 
     &__button
         font-weight: 600
-        font-size: 22px
+        font-size: clamp(14px,22/1024*100vw,22px)
         line-height: 34px
         text-transform: uppercase
         color: #0A64A3
         display: flex
         flex-direction: row
         align-items: flex-start
-        padding: 27px 72px
+        padding: clamp(13px,27/1024*100vw,27px) clamp(48px,72/1024*100vw,72px)
         gap: 10px
         background: #FFFFFF
         border-radius: 50px
         border: none
         margin-top: 60px
+        max-width: 381px
+        margin: 0 auto
+
     &__main-list
         @media (width < 1024px)
             display: none
@@ -69,7 +72,7 @@
     &__slider
         position: relative
         display: none
-        width: 97%
+        width: 100%
         margin: 0 auto
         @media (width < 1024px)
             display: block

@@ -1,13 +1,14 @@
 .goal
     padding: 120px 1em 143px
-    display: grid
-    place-items: center
+    display: flex
+    flex-direction: column
+    align-items: stretch
 
     &__wrap
-        width: min(1450px, 100vw)
+        width: min(1450px, (100vw - 2em))
 
     &__container
-        max-width: 729px
+        width: min(729px, (100vw - 2em))
 
     &__title
         margin-bottom: 34px

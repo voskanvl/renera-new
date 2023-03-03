@@ -19,14 +19,14 @@
         font-family: 'TT Firs Neue'
         font-style: normal
         font-weight: 600
-        font-size: 50px
+        font-size: clamp(22px,50/1024*100vw,50px)
         line-height: 109%
         margin-bottom: 16px
 
     &__text
         font-style: normal
         font-weight: 400
-        font-size: 24px
+        font-size: clamp(14px,24/1024*100vw,24px)
         line-height: 109%
 
     &__controls
@@ -34,16 +34,20 @@
         display: flex
         align-items: center
         column-gap: 61px
+        @media (width <= 768px)
+            flex-direction: column
+            align-items: stretch
+            row-gap: 20px
 
     &__button
         display: flex
-        flex-direction: row
-        align-items: flex-start
-        padding: 20px 48px
+        align-items: center
+        justify-content: center
+        padding: clamp(13px,20/1024*100vw,20px) clamp(42px,48/1024*100vw,48px)
         gap: 10px
         background: #fff
         color: #0A64A3
         font-weight: 600
-        font-size: 22px
+        font-size: clamp(12px,22/1024*100vw,22px)
         line-height: 22px
         border-radius: 15px

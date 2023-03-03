@@ -17,7 +17,7 @@
 
     &__title
         font-weight: 400
-        font-size: 28px
+        font-size: clamp(16px,28/1024*100vw,28px)
         line-height: 160%
         margin-bottom: 46px
 
@@ -29,19 +29,19 @@
 
     &__list-item
         display: flex
-        align-items: center
+        align-items: flex-start
         column-gap: 0.78125vw
 
     &__list-id
         font-weight: 400
-        font-size: 18px
-        line-height: 151%
+        font-size: clamp(12px,18/1024*100vw,18px)
+        line-height: 182%
         color: rgba(255, 255, 255, 0.8)
         opacity: 0.8
 
     &__list-name
         font-weight: 400
-        font-size: 24px
+        font-size: clamp(14px,24/1024*100vw,24px)
         line-height: 151%
 
     &__button

@@ -1,7 +1,12 @@
 .reliabilityGuarantees
     display: block
-    max-width: 1450px
     margin: 120px 1em 244px
+    @media (width<1024px)
+        margin-bottom: 94px
+
+    &__container
+        width: min(1450px, (100% - 2em))
+        margin: 0 auto
 
     &__title
         color: #1E1E1E

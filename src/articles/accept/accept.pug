@@ -1,3 +1,5 @@
+include ../../pug/splides.pug
+
 .accept
     .accept__wrap
         .accept__title 
@@ -10,5 +12,39 @@
                 li.accept__list-item 
                     span.accept__list-id= i.id
                     span.accept__list-name= i.name
+        .accept__slider
+            -
+                const a = accept.reduce(
+                    (acc, e, idx) => {
+                        const current = (idx / 5) | 0;
+                        if (acc[current]) {
+                            acc[current].push(e);
+                        } else {
+                            acc[current] = [];
+                            acc[current].push(e);
+                        }
+                        return acc;
+                    },
+                    [[]],
+                )
+            .accept__indicator-lines 
+                .accept__indicator-line.accept__indicator-line--back
+                .accept__indicator-line.accept__indicator-line--front
+
+            .accept__slide-control
+                .accept__indicators
+                    span.accept__indicator.accept__indicator--current
+                    span / 
+                    span.accept__indicator.accept__indicator--total
+                .accept__controls
+                    .accept__control.accept__control--left
+                    .accept__control.accept__control--right
+            +splide("accept", a)
+                each i in val
+                    .accept__list-item 
+                        .accept__list-id= i.id
+                        .accept__list-name= i.name
+
         button.accept__button Стать кандидатом
+
 

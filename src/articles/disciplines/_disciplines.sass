@@ -3,8 +3,14 @@
     margin: 0px auto 132px
 
     &__title
-        @extend .reliabilityGuarantees__title
+        // @extend .reliabilityGuarantees__title
+        color: #1E1E1E
+        padding-bottom: 30px
+        border-bottom: 1px solid #1E1E1E
+        font-family: 'TT Firs Neue', sans-serif
+        font-size: clamp(18px,50/1920*100vw,50px)
         padding-right: 33px
+        margin-bottom: 0
 
     &__list
         display: flex
@@ -17,3 +23,5 @@
         display: flex
         align-items: center
         column-gap: 15px
+        translate: 0
+        z-index: 3

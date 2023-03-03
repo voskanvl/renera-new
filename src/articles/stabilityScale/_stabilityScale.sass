@@ -67,7 +67,6 @@
         margin-left: 3.7em
 
     &__button
-        display: block
         border: none
         border-radius: 50px
         background: #fff
@@ -79,3 +78,6 @@
         line-height: 28px
         max-width: 250px
         margin: 0 auto
+        display: none
+        @media (width<1024px)
+            display: block

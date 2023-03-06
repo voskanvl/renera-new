@@ -1,6 +1,10 @@
 .disciplines
-    max-width: 1450px
+    display: grid
+    place-items: center
     margin: 0px auto 132px
+
+    &__container
+        width: min(1450px, 100% - 2em)
 
     &__title
         // @extend .reliabilityGuarantees__title
@@ -37,6 +41,8 @@
         border-radius: 15px
         margin-top: 62px
         cursor: pointer
+        max-width: 304px
+        text-decoration: none
 
         & > span
             font-family: 'Graphik LCG', sans-serif
@@ -44,3 +50,4 @@
             font-size: 22px
             line-height: 22px
             color: #0A64A3
+            white-space: nowrap

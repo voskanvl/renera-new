@@ -1,7 +1,9 @@
 .open
-    // display: grid
-    // place-items: center
     padding: 128px 1em 121px
+    display: grid
+    place-items: center
+    @media (width < 1024px)
+        padding: 128px 1em 84px
 
     &__wrap
         width: min(1450px, 100%)
@@ -47,14 +49,16 @@
     &__button
         display: flex
         flex-direction: row
-        align-items: flex-start
+        align-items: center
+        justify-content: center
         padding: 20px 48px
-        gap: 10px
+        // gap: 10px
         font-weight: 600
-        font-size: clamp(12px,22/1024*100vw,22px)
+        font-size: clamp(12px,22/1024*100vw,18px)
         line-height: 22px
         border-radius: 15px
         background: #218DD9
         color: #fff
         box-shadow: 0px 0px 25px rgba(33, 141, 217, 0.5)
         border-radius: 20px
+        text-decoration: none

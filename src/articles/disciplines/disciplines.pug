@@ -1,23 +1,24 @@
 include ../../components/accordion/accordion.pug
 .disciplines
-    h2.disciplines__title СПИСОК  ВОСТРЕБОВАННЫХ ДИСЦИПЛИН В УЧЕБНЫХ ЗАВЕДЕНИЯХ-ПАРТНЕРАХ «РЭНЕРА»:
-    +accordion("БФУ (Балтийский федеральный университет имени И.Канта)")
-        ul.disciplines__list 
-            li 
-                p Химия, бакалавриат, срок обучения 4 года
-            li  
-                p Химическая экспертиза, Магистратура, срок обучения 2 года
-                p.disciplines__programm
-                    a(href="#") К программе 
-                    img(src="../../../assets/svg/arrow-right.svg")
-            li 
-                p Химия, Технология аналитического контроля химических соединений, бакалавриат, срок обучения 2 года 10 месяцев
-                p.disciplines__programm
-                    a(href="#") К программе 
-                    img(src="../../../assets/svg/arrow-right.svg")
-    +accordion("Технологический колледж, г.Советск")
-    +accordion("Гусевский политехнический техникум")
-    +accordion("Прибалтийский судостроительный техникум")
-    button.disciplines__button 
-        img(src="../../../assets/svg/booklet.svg")
-        span Скачать буклет
+    .disciplines__container
+        h2.disciplines__title СПИСОК  ВОСТРЕБОВАННЫХ ДИСЦИПЛИН В УЧЕБНЫХ ЗАВЕДЕНИЯХ-ПАРТНЕРАХ «РЭНЕРА»:
+        +accordion("БФУ (Балтийский федеральный университет имени И.Канта)")
+            ul.disciplines__list 
+                li 
+                    p Химия, бакалавриат, срок обучения 4 года
+                li  
+                    p Химическая экспертиза, Магистратура, срок обучения 2 года
+                    p.disciplines__programm
+                        a(href="#") К программе 
+                        img(src="../../../assets/svg/arrow-right.svg")
+                li 
+                    p Химия, Технология аналитического контроля химических соединений, бакалавриат, срок обучения 2 года 10 месяцев
+                    p.disciplines__programm
+                        a(href="#") К программе 
+                        img(src="../../../assets/svg/arrow-right.svg")
+        +accordion("Технологический колледж, г.Советск")
+        +accordion("Гусевский политехнический техникум")
+        +accordion("Прибалтийский судостроительный техникум")
+        a.disciplines__button(href="#") 
+            img(src="../../../assets/svg/booklet.svg")
+            span Скачать буклет

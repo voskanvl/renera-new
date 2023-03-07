@@ -3,22 +3,9 @@ import "../assets/fonts/stylesheet.css";
 import "../assets/fonts/GraphikLCG/stylesheet.css";
 import "@splidejs/splide/css";
 import { OptionSlide, SlideClass } from "./classSlides";
-import YouTubePlayer from "youtube-player";
+import video from "./video";
 
-const player1 = YouTubePlayer("video1");
-player1.loadVideoById("we5lA3JH3vA");
-const tizerVideo = document.querySelector<HTMLElement>(".tizer__video");
-!!tizerVideo &&
-    tizerVideo.addEventListener("click", () => {
-        const isStarted = tizerVideo.getAttribute("start");
-        if (isStarted) {
-            player1.pauseVideo();
-            tizerVideo.removeAttribute("start");
-        } else {
-            player1.playVideo();
-            tizerVideo.setAttribute("start", "start");
-        }
-    });
+video();
 
 const accept: OptionSlide = {
     elementName: "#accept",

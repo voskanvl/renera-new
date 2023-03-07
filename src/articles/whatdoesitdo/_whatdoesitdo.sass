@@ -1,19 +1,34 @@
 .whatdoesitdo
     padding: 169px 1em 189px
-    background-image: url("../../../assets/images/kaliningrad.jpg")
-    background-repeat: no-repeat
+    background: #222
+    // background-image: url("../../../assets/images/kaliningrad.jpg")
+    // background-repeat: no-repeat
     color: #fff
     display: grid
     place-items: center
+    position: relative
     @media (width < 1024px)
         background-image: none
         color: #000
+        background-color: #fff
         padding: 0px 1em 80px
 
     & img
         width: 50%
 
+    &__youtube
+        inset: 0
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        background: #222
+        z-index: 0
+        @media (width < 1024px)
+            display: none
+
     &__container
+        z-index: 1
         width: min(1450px, (100vw - 2em))
         display: grid
         grid-template-columns: repeat(2,50%)
@@ -49,9 +64,10 @@
 
     &__video
         display: none
-        flex-direction: column
-        row-gap: 25px
+        // flex-direction: column
+        // row-gap: 25px
         @media (width < 1024px)
-            display: flex
+            display: block
         & > .whatdoesitdo__title
             padding-left: 1em
+            margin-bottom: 25px

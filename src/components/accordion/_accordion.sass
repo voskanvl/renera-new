@@ -4,8 +4,9 @@
     padding: 50px 0
     &__header
         font-weight: 400
-        font-size: 30px
-        line-height: 30px
+        // font-size: 30px
+        font-size: clamp(18px,50/1920*100vw,50px)
+        // line-height: 30px
         text-decoration-line: underline
         color: #000000
 
@@ -40,6 +41,7 @@
     &__mark
         background-image: url("../../../assets/svg/plus.svg")
         background-repeat: no-repeat
-        width: 30px
-        height: 30px
+        width: clamp(20px,30/1024*100vw,30px)
+        aspect-ratio: 1
         background-size: contain
+        flex-shrink: 0

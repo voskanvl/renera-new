@@ -3,9 +3,10 @@ import "../assets/fonts/stylesheet.css";
 import "../assets/fonts/GraphikLCG/stylesheet.css";
 import "@splidejs/splide/css";
 import { OptionSlide, SlideClass } from "./classSlides";
-import video from "./video";
+import video1 from "./video1";
 
-video();
+// video();
+video1();
 
 const accept: OptionSlide = {
     elementName: "#accept",

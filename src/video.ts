@@ -10,7 +10,6 @@ export default function video() {
             rel: 0,
         },
     });
-    // player1.loadVideoById("we5lA3JH3vA");
 
     const tizerVideo = document.querySelector<HTMLElement>(".tizer__video");
     const tizerRight = document.querySelector<HTMLElement>(".tizer__right");

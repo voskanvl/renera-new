@@ -13,15 +13,19 @@ export default function video() {
     // player1.loadVideoById("we5lA3JH3vA");
 
     const tizerVideo = document.querySelector<HTMLElement>(".tizer__video");
+    const tizerRight = document.querySelector<HTMLElement>(".tizer__right");
     !!tizerVideo &&
+        !!tizerRight &&
         tizerVideo.addEventListener("click", () => {
-            const isStarted = tizerVideo.getAttribute("start");
+            const isStarted = tizerVideo.getAttribute("play");
             if (isStarted) {
                 player1.pauseVideo();
-                tizerVideo.removeAttribute("start");
+                tizerVideo.removeAttribute("play");
+                tizerRight.removeAttribute("play");
             } else {
                 player1.playVideo();
-                tizerVideo.setAttribute("start", "start");
+                tizerVideo.setAttribute("play", "play");
+                tizerRight.setAttribute("play", "play");
             }
         });
 

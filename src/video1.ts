@@ -36,4 +36,19 @@ export default function video1() {
         const isPlay = tizer.getAttribute("play");
         isPlay ? tizer.removeAttribute("play") : tizer.setAttribute("play", "play");
     });
+
+    const videoElement2 = document.querySelector<HTMLVideoElement>("#video2");
+    const observer = new IntersectionObserver(
+        ([{ isIntersecting }]) => {
+            isIntersecting
+                ? setTimeout(() => videoElement2!.play(), 0)
+                : setTimeout(() => videoElement2!.pause(), 0);
+        },
+        {
+            threshold: [0.2],
+        },
+    );
+    const containerVideo2 = document.querySelector<HTMLElement>(".whatdoesitdo");
+    if (!containerVideo2) throw Error("there isn't #video2");
+    observer.observe(containerVideo2);
 }

@@ -5,7 +5,7 @@
     &__header
         font-weight: 400
         // font-size: 30px
-        font-size: clamp(18px,50/1920*100vw,50px)
+        font-size: clamp(18px,25/1920*100vw,25px)
         // line-height: 30px
         text-decoration-line: underline
         color: #000000
@@ -39,7 +39,14 @@
     &__header
         display: flex
         align-items: center
-        justify-content: space-between
+        justify-content: flex-end
+
+        & > a
+            color: #000
+            position: absolute
+            left: 0
+            z-index: 2
+            width: fit-content
 
     &__mark
         background-image: url("../../../assets/svg/plus.svg")

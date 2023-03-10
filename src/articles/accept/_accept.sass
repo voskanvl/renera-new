@@ -52,6 +52,18 @@
         font-size: clamp(14px,24/1024*100vw,24px)
         line-height: 151%
 
+    .accept__controls
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: 60px
+        @media (width < 600px)
+            flex-direction: column
+            row-gap: 20px
+            & > .accept__button
+                width: 100%
+                justify-content: center
+
     &__button
         font-weight: 600
         font-size: clamp(14px,22/1024*100vw,22px)
@@ -66,9 +78,13 @@
         background: #FFFFFF
         border-radius: 50px
         border: none
-        margin-top: 60px
-        max-width: 381px
-        margin: 0 auto
+        max-width: 425px
+        // margin: 0 auto
+        text-decoration: none
+
+        &--blue
+            background: #00b0f0
+            color: #fff
 
     &__main-list
         @media (width < 1024px)

@@ -45,3 +45,14 @@ slider.splidesInstance!.instances["#accept"].on("active", obj => {
     !!totalIndicator && (totalIndicator.innerText = length + "");
     !!lineIndicator && (lineIndicator.style.width = ((obj.index + 1) / length) * 100 + "%");
 });
+
+const accordionMarks = document.querySelectorAll<HTMLElement>(".accordion__mark");
+accordionMarks.forEach(e =>
+    e.addEventListener("click", () => {
+        const accordion = e.closest(".accordion");
+        if (!accordion) throw Error("there isn't parent .accordion");
+        const inputElement = accordion.querySelector<HTMLInputElement>("input");
+        if (!inputElement) throw Error("there isn't input in parent .accordion");
+        inputElement.checked ? (inputElement.checked = false) : (inputElement.checked = true);
+    }),
+);

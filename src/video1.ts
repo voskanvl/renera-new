@@ -4,10 +4,10 @@ function videoSection(videoSelector: string, triggerSelector: string) {
     if (!videoElement) throw Error(`there isn't ${videoSelector}`);
     if (!trigger) throw Error(`there isn't ${triggerSelector}`);
 
-    let plaing = false;
+    let playing = false;
 
     trigger.addEventListener("click", () => {
-        plaing
+        playing
             ? (() => {
                   videoElement!.pause();
                   trigger.removeAttribute("play");
@@ -18,8 +18,8 @@ function videoSection(videoSelector: string, triggerSelector: string) {
               })();
     });
 
-    videoElement.addEventListener("play", () => (plaing = true));
-    videoElement.addEventListener("pause", () => (plaing = false));
+    videoElement.addEventListener("play", () => (playing = true));
+    videoElement.addEventListener("pause", () => (playing = false));
 }
 
 export default function video1() {
@@ -40,6 +40,8 @@ export default function video1() {
     const videoElement2 = document.querySelector<HTMLVideoElement>("#video2");
     const observer = new IntersectionObserver(
         ([{ isIntersecting }]) => {
+            const { display } = getComputedStyle(videoElement2!);
+            if (display === "none") return;
             isIntersecting
                 ? setTimeout(() => videoElement2!.play(), 0)
                 : setTimeout(() => videoElement2!.pause(), 0);

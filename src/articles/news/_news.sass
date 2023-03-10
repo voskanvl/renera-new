@@ -8,7 +8,12 @@
             grid-template-columns: 100%
 
     &__panel
-        padding: clamp(37px,125/1920*100vw,125px) clamp(26px,65/1920*100vw,65px) clamp(23px,91/1920*100vw,91px) clamp(28px,88/1920*100vw,88px)
+        padding: clamp(23px,40/1920*100vw,40px) clamp(26px,65/1920*100vw,65px) clamp(23px,60/1920*100vw,60px) clamp(28px,88/1920*100vw,88px)
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 100%
+
         &--white
             background: #FDFDFD
             box-shadow: 0px 0px 30px rgba(30, 30, 30, 0.1)
@@ -37,7 +42,7 @@
         margin-top: ph(70)
         display: flex
         justify-content: center
-        gap: 18px 6.25vw
+        gap: 18px 1.25vw
         // @media (width<=768px)
         //     flex-direction: column
         //     align-items: center
@@ -57,6 +62,21 @@
         align-items: center
         justify-content: center
         text-decoration: none
+        flex-wrap: wrap
         & > p
             width: 70%
             text-align: center
+
+    &__button
+        text-decoration: none
+        border-radius: 30px
+        background: #00b0f0
+        padding: 1em 2em
+        width: 100%
+        display: grid
+        place-items: center
+        text-align: center
+        font-size: clamp(12px,16/1024*100vw,16px)
+
+        &--white
+            color: #fff

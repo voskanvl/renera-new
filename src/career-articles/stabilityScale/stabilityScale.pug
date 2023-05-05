@@ -1,0 +1,12 @@
+.stabilityScale
+    .stabilityScale__content 
+        h2.stabilityScale__title 
+            p КОМПАНИЯ
+            p.stabilityScale__title-shift  В ЦИФРАХ
+        ul.stabilityScale__data 
+            each i in stabilityScale1
+                li.stabilityScale__data-item
+                    .stabilityScale__data-title!= i.title
+                    .stabilityScale__data-text= i.text
+
+        //- a.stabilityScale__button(href="#") Где учиться

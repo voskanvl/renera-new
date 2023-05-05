@@ -1,0 +1,37 @@
+.modal-form
+    .modal-form__close 
+        span Закрыть
+        span X
+    .modal-form__container
+        h2 Заполните заявку на участие в отборе
+        form(action="/mail1.php" method="POST")
+            div 
+                label
+                    input(type="text" name="name" role="name" placeholder="ФИО контактного лица")
+                    span.modal-form__error Вы забыли указать данные
+                label
+                    input(type="text" name="post" role="post" placeholder="Должность, которую вы рассматриваете сейчас или занимаете")
+                    span.modal-form__error
+                label
+                    input(type="text" name="email" role="email" placeholder="Email")
+                    span.modal-form__error Введите корректный email 
+
+                div.modal-form__file 
+                    span
+                        include ../../../assets/svg/fi-rr-clip.svg
+                    span Прикрепить резюме, doc., ppt, весом не более 1 Мб
+                    input(type="file" name="file" accept="image/*, application/msword, application/pdf")
+            div
+                label
+                    input(type="text" name="city" role="city" placeholder="Город проживания")
+                    span.modal-form__error
+                label
+                    input(type="text" name="tel" role="tel" placeholder="Телефон")
+                    span.modal-form__error
+
+                div.modal-form__submit 
+                    div.modal-form__agree 
+                        input(type="checkbox" name="agree")
+                        span.modal-form__error(style="position: absolute; top: 5em;") Без согласия на обработку персональных данных мы не можем принять форму
+                        span Даю согласие на обработку моих персональных данный в соответствии с политикой обработки персональных данных
+                    input(type="submit" value="Отправить" )

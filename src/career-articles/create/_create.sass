@@ -1,0 +1,60 @@
+.create
+    background: url("../../../assets/images/web1.png") no-repeat
+    background-size: contain
+    background-position: 100% 0
+    height: 100dvh
+    display: grid
+    place-items: center
+    color: #333333
+    font-size: clamp(12px, 24 / 1920 * 100vw, 24px)
+    padding-inline: pw(266)
+
+    @media (width <= 768px)
+        padding-inline: 2em
+
+    &__container
+
+        & > p
+            margin-bottom: ph(23)
+
+    &__shift
+        padding-left: 2em
+
+    h2
+        font-weight: 500
+        font-size: clamp(23px, 83 / 1920 * 100vw, 83px)
+        margin-bottom: ph(23)
+
+    &__grid
+        display: grid
+        grid-template-columns: repeat(2,1fr)
+        column-gap: 3%
+
+        @media (width<=768px)
+            grid-template-columns: 100%
+            grid-template-rows: repeat(2, 1fr)
+            row-gap: ph(10)
+
+        &--inner
+            grid-template-columns: repeat(2,1fr)
+            column-gap: 1%
+
+    &__last
+        border-left: 1px solid #000
+        padding-left: pw(40)
+
+        @media (width<=768px)
+            padding-left: unset
+            border-left: none
+
+    &__button
+        background: #00B0E8
+        border-radius: 33px
+        font-weight: 350
+        font-size: clamp(12px, 24 / 1920 * 100vw, 24px)
+        color: #fff
+        display: grid
+        place-items: center
+        border: none
+        text-decoration: none
+        cursor: pointer

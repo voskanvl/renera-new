@@ -1,8 +1,14 @@
 function videoSection(videoSelector: string, triggerSelector: string) {
     const videoElement = document.querySelector<HTMLVideoElement>(videoSelector);
     const trigger = document.querySelector<HTMLElement>(triggerSelector);
-    if (!videoElement) throw Error(`there isn't ${videoSelector}`);
-    if (!trigger) throw Error(`there isn't ${triggerSelector}`);
+    if (!videoElement) {
+        console.warn(`there isn't ${videoSelector}`);
+        return;
+    }
+    if (!trigger) {
+        console.warn(`there isn't ${triggerSelector}`);
+        return;
+    }
 
     let playing = false;
 
@@ -29,8 +35,14 @@ export default function video1() {
 
     const tizerVideo = document.querySelector<HTMLElement>(".tizer__video");
     const tizer = document.querySelector<HTMLElement>(".tizer");
-    if (!tizerVideo) throw Error(`there isn't ${".tizer__video"}`);
-    if (!tizer) throw Error(`there isn't ${".tizer"}`);
+    if (!tizerVideo) {
+        console.warn(`there isn't ${".tizer__video"}`);
+        return;
+    }
+    if (!tizer) {
+        console.warn(`there isn't ${".tizer"}`);
+        return;
+    }
 
     tizerVideo.addEventListener("click", () => {
         const isPlay = tizer.getAttribute("play");
@@ -53,4 +65,6 @@ export default function video1() {
     const containerVideo2 = document.querySelector<HTMLElement>(".whatdoesitdo");
     if (!containerVideo2) throw Error("there isn't #video2");
     observer.observe(containerVideo2);
+
+    videoElement2 && videoElement2.addEventListener("loadeddata", () => console.info("loadeddata"));
 }

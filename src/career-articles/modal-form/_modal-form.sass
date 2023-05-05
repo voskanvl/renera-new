@@ -1,0 +1,143 @@
+.modal-form
+    background: url("../../../assets/images/contact-form-bg 1.png") no-repeat
+    background-size: cover
+    background-position: center
+    color: #fff
+
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100dvh
+    padding-bottom: 2em
+    overflow-y: auto
+
+    display: grid
+    place-items: center
+
+    opacity: 0
+    z-index: -1
+
+    transition: opacity .6s
+
+    &[open]
+        z-index: 2
+        opacity: 1
+
+    &__container
+        padding-left: pw(236)
+
+        @media (width <= 1440px)
+            padding-left: 1em
+
+        @media (width <= 425px)
+            padding-top: 5em
+
+    &__close
+        position: absolute
+        top: 2em
+        right: 5em
+        display: flex
+        align-items: center
+        column-gap: 0.5em
+        cursor: pointer
+
+    h2
+        text-transform: uppercase
+        font-size: clamp(20px,40 / 1024 * 100vw,40px)
+        margin-bottom: ph(136)
+
+        @media (width<=1024px)
+            margin-bottom: 1em
+
+    form
+        display: grid
+        grid-template-columns: repeat(2,calc(50% - pw(243)))
+        column-gap: pw(243)
+
+        @media (width <= 1440px)
+            grid-template-columns: repeat(2,calc(50% - 2em))
+            column-gap: 2em
+        @media (width <= 1024px)
+            grid-template-columns: calc(100% - 2em)
+            row-gap: ph(32)
+
+    input[type="text"]
+        appearance: none
+        -webkit-appearance: none
+
+        padding-left: 1em
+        display: block
+        width: 100%
+        background: none
+        border: none
+        border-bottom: 1px solid #fff
+        padding-block: ph(21)
+        font-size: clamp(12px,20 / 1024 * 100vw,20px)
+        font-weight: 500
+        color: #fff
+
+        &::placeholder
+            color: #fff
+
+        &:-webkit-autofill,
+        &:-webkit-autofill:focus
+            transition: background-color 600000s 0s, color 600000s 0s
+
+    label
+        display: flex
+        flex-direction: column
+        row-gap: 0.5em
+        margin-bottom: 20px
+
+        @media (width <= 768px)
+            margin-bottom: 0
+    &__error
+        color: #f70
+        opacity: 0
+        height: 1em
+
+    &__file
+        position: relative
+        display: flex
+        align-items: center
+        font-size: clamp(12px,20 / 1024 * 100vw,20px)
+        input
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            opacity: 0
+            z-index: 2
+            cursor: pointer
+
+    &__submit
+        display: flex
+        flex-direction: row-reverse
+
+        column-gap: pw(65)
+
+        @media (width <= 425px)
+            flex-direction: column
+            row-gap: 2em
+
+        input
+            color: #fff
+            background: none
+            border: 1px solid #fff
+            padding: 16px pw(58)
+            font-size: 20px
+            cursor: pointer
+
+            &:disabled
+                color: #888
+                border: 1px solid #888
+                cursor: default
+                pointer-events: all
+
+    &__agree
+        display: flex
+        column-gap: 12px
+        align-items: flex-start
+        position: relative

@@ -2,6 +2,7 @@
 @import "sass/_fonts"
 @import "components/**/*.sass"
 @import "articles/**/*.sass"
+@import "career-articles/**/*.sass"
 // @import "articles/tizer/_tizer.sass"
 
 :root
@@ -36,3 +37,11 @@ main > header.header
     &[data-number="0"]
         background: linear-gradient(to left, #E9F3FC, #fff)
         cursor: url("../assets/cursor/black.png") 19 19, default
+
+.career
+
+    .stabilityScale
+        @media (width < 1024px)
+            height: 920px
+        &__data-item
+            padding-right: 3vw
